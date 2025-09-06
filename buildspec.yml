@@ -5,9 +5,15 @@ phases:
       nodejs: 18
   pre_build:
     commands:
+      - echo "Current directory:"
+      - pwd
+      - echo "Listing files:"
+      - ls -la
+      - echo "Installing dependencies..."
       - npm install
   build:
     commands:
+      - echo "Building Next.js app..."
       - npm run build
 artifacts:
   files:
